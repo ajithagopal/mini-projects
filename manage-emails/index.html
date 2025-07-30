@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Manage Emails</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap">
+
+    
+    <link rel='stylesheet' type='text/css' media='screen' href="./assets/css/manage-mails.css">
+    <!-- <script src='main.js'></script> -->
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-btns">
+                <div class="logo">
+                    <a href="#_"><img src="./assets/images/th-group-logo.png" alt="The Hindu Groups" title="The Hindu Groups"/></a>
+                </div>
+                <div class="btns">
+                    <button class="btn subcribe-btn">Subscribe</button>
+                    <button class="btn account-btn">Account</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="nav-tabs-section">
+            <div class="container">
+                <div class="nav-tabs">
+                    <button class="btn nav-btn active" data-target="tab1" onclick="changeTab(this)">
+                        <img src="./assets/images/th-circle-logo.svg" />
+                        <span>The Hindu</span>
+                    </button>
+                    <button class="btn nav-btn" data-target="tab2" onclick="changeTab(this)">
+                        <img src="./assets/images/th-epaper-circle-logo.svg" />
+                        <span>The Hindu ePaper</span>
+                    </button>
+                    <button class="btn nav-btn" data-target="tab3" onclick="changeTab(this)">
+                        <img src="./assets/images/bl-circle-logo.svg" />
+                        <span>The Hindu Businessline</span>
+                    </button>
+                    <button class="btn nav-btn" data-target="tab4" onclick="changeTab(this)">
+                        <img src="./assets/images/bl-epaper-circle-logo.svg" />
+                        <span>The Hindu Businessline epaper</span>
+                    </button>
+                    <button class="btn nav-btn" data-target="tab5" onclick="changeTab(this)">
+                        <img src="./assets/images/ss-circle-logo.svg" />
+                        <span>Sportstar</span>
+                    </button>
+                    <button class="btn nav-btn" data-target="tab6" onclick="changeTab(this)">
+                        <img src="./assets/images/fl-circle-logo.svg" />
+                        <span>Frontline</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container nav-content">
+            <div class="content active" id="tab1">
+                <h2>Manage Emails</h2>
+                <p>From the day’s news agenda to the intricacies of diplomacy <strong>The Hindu</strong> delivers the best of news and analysis to your inbox.</p>
+                <div class="manage-items">
+                    <div class="item select-all-option">
+                        <label>SELECT ALL</label>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectAllOptions" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Account Updates</h4>
+                            <p>Updates relating to a paid or trial subscription, personal information or about an account.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">News Updates</h4>
+                            <p>News digests, must-read articles, breaking news, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Product updates</h4>
+                            <p>Changes to features, apps, website, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Promotions</h4>
+                            <p>Offers and discounts. Promotional content.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn basic-btn">SAVE PREFERENCES</button>
+                <p class="note"><strong>Note:</strong> Newsletters can be managed separately <a href="#_">Click here</a></p>
+            </div>
+            <div class="content" id="tab2">
+                <h2>Manage Emails</h2>
+                <p>From the day’s news agenda to the intricacies of diplomacy <strong>The Hindu</strong> delivers the best of news and analysis to your inbox.</p>
+                <div class="manage-items">
+                    <div class="item select-all-option">
+                        <label>SELECT ALL</label>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectAllOptions" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Account Updates</h4>
+                            <p>Updates relating to a paid or trial subscription, personal information or about an account.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">News Updates</h4>
+                            <p>News digests, must-read articles, breaking news, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Product updates</h4>
+                            <p>Changes to features, apps, website, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Promotions</h4>
+                            <p>Offers and discounts. Promotional content.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn basic-btn">SAVE PREFERENCES</button>
+                <p class="note"><strong>Note:</strong> Newsletters can be managed separately <a href="#_">Click here</a></p>
+            </div>
+            <div class="content" id="tab3">
+                <h2>Manage Emails</h2>
+                <p>From the day’s news agenda to the intricacies of diplomacy <strong>The Hindu</strong> delivers the best of news and analysis to your inbox.</p>
+                <div class="manage-items">
+                    <div class="item select-all-option">
+                        <label>SELECT ALL</label>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectAllOptions" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Account Updates</h4>
+                            <p>Updates relating to a paid or trial subscription, personal information or about an account.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">News Updates</h4>
+                            <p>News digests, must-read articles, breaking news, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Product updates</h4>
+                            <p>Changes to features, apps, website, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Promotions</h4>
+                            <p>Offers and discounts. Promotional content.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn basic-btn">SAVE PREFERENCES</button>
+                <p class="note"><strong>Note:</strong> Newsletters can be managed separately <a href="#_">Click here</a></p>
+            </div>
+            <div class="content" id="tab4">
+                <h2>Manage Emails</h2>
+                <p>From the day’s news agenda to the intricacies of diplomacy <strong>The Hindu</strong> delivers the best of news and analysis to your inbox.</p>
+                <div class="manage-items">
+                    <div class="item select-all-option">
+                        <label>SELECT ALL</label>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectAllOptions" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Account Updates</h4>
+                            <p>Updates relating to a paid or trial subscription, personal information or about an account.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">News Updates</h4>
+                            <p>News digests, must-read articles, breaking news, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Product updates</h4>
+                            <p>Changes to features, apps, website, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Promotions</h4>
+                            <p>Offers and discounts. Promotional content.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn basic-btn">SAVE PREFERENCES</button>
+                <p class="note"><strong>Note:</strong> Newsletters can be managed separately <a href="#_">Click here</a></p>
+            </div>
+            <div class="content" id="tab5">
+                <h2>Manage Emails</h2>
+                <p>From the day’s news agenda to the intricacies of diplomacy <strong>The Hindu</strong> delivers the best of news and analysis to your inbox.</p>
+                <div class="manage-items">
+                    <div class="item select-all-option">
+                        <label>SELECT ALL</label>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectAllOptions" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Account Updates</h4>
+                            <p>Updates relating to a paid or trial subscription, personal information or about an account.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">News Updates</h4>
+                            <p>News digests, must-read articles, breaking news, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Product updates</h4>
+                            <p>Changes to features, apps, website, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Promotions</h4>
+                            <p>Offers and discounts. Promotional content.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn basic-btn">SAVE PREFERENCES</button>
+                <p class="note"><strong>Note:</strong> Newsletters can be managed separately <a href="#_">Click here</a></p>
+            </div>
+            <div class="content" id="tab6"><h2>Manage Emails</h2>
+                <p>From the day’s news agenda to the intricacies of diplomacy <strong>The Hindu</strong> delivers the best of news and analysis to your inbox.</p>
+                <div class="manage-items">
+                    <div class="item select-all-option">
+                        <label>SELECT ALL</label>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectAllOptions" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Account Updates</h4>
+                            <p>Updates relating to a paid or trial subscription, personal information or about an account.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">News Updates</h4>
+                            <p>News digests, must-read articles, breaking news, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Product updates</h4>
+                            <p>Changes to features, apps, website, etc.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h4 class="title">Promotions</h4>
+                            <p>Offers and discounts. Promotional content.</p>
+                        </div>
+                        <div class="checkbox-control">
+                            <input class="checkbox selectOption" type="checkbox" value="" checked/>
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn basic-btn">SAVE PREFERENCES</button>
+                <p class="note"><strong>Note:</strong> Newsletters can be managed separately <a href="#_">Click here</a></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var navBtns = document.querySelectorAll(".nav-tabs .nav-btn")
+        function changeTab(e){
+            console.log(e.getAttribute("data-target"));
+            for (i = 0; i < navBtns.length; i++){
+                document.querySelectorAll(".nav-tabs .nav-btn")[i].classList.remove('active');
+            }
+            e.classList.add("active")
+            document.querySelector(".content.active").classList.remove("active")
+            document.querySelector("#"+e.getAttribute("data-target")).classList.add("active")
+        }
+
+        $('.selectAllOptions').change(function () {
+            if($(this).prop('checked') == true){
+                $(this).parents(".manage-items").find('.selectOption').prop('checked', true);
+            }
+            else{
+                $(this).parents(".manage-items").find('.selectOption').prop('checked', false);
+            }
+        });
+
+        $('.selectOption').change(function () {
+            if($(this).parents(".manage-items").find('.selectOption:checked').length == 4)
+            {
+                $(this).parents(".manage-items").find('.selectAllOptions').prop('checked', true);
+            }
+            else{
+                $(this).parents(".manage-items").find('.selectAllOptions').prop('checked', false);
+            }
+        });
+
+        // $('#myCheckbox').prop('checked', true); 
+        // $('#myCheckbox').prop('checked', false);
+    </script>
+</body>
+</html>

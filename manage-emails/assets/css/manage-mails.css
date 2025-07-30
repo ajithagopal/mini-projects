@@ -1,0 +1,661 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+* {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  font-display: optional;
+}
+
+body {
+  margin: 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+.black-text {
+  color: #000000 !important;
+}
+
+.base-text {
+  color: #B00020 !important;
+}
+
+.container {
+  max-width: 1300px;
+}
+
+@media screen and (max-width: 1450px) {
+  .container {
+    max-width: 1100px !important;
+  }
+}
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, button:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+a:hover .ad::after, button:hover .ad::after {
+  text-decoration: none;
+}
+
+.btn {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.btn:focus, .btn:hover {
+  box-shadow: none;
+  outline: none;
+}
+
+.basic-btn {
+  height: 38px;
+  border-radius: 3px;
+  border: none;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background: #000000;
+  color: #ffffff;
+  padding: 0 10px 0 20px;
+  margin: 10px 0;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+.basic-btn.sub-btn {
+  height: 32px;
+}
+.basic-btn:focus, .basic-btn:hover {
+  box-shadow: none;
+  outline: none;
+}
+.basic-btn:after {
+  content: "→";
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 6px;
+  height: 8px;
+  position: relative;
+  opacity: 0;
+  top: 0px;
+  right: 20%;
+  transition: 0.3s;
+}
+.basic-btn:hover {
+  padding-right: 20px;
+  padding-left: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.basic-btn:hover::after {
+  opacity: 1;
+  right: -8px;
+}
+.basic-btn.red-btn {
+  background: #B00020;
+}
+
+@media screen and (max-width: 570px) {
+  .basic-btn {
+    height: 34px;
+    font-size: 12px;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .basic-btn {
+      height: 38px;
+      border-radius: 3px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #ffffff;
+      padding: 0 10px 0 20px;
+      background: #000000;
+      margin: 10px 0;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .basic-btn span {
+      font-family: inherit;
+    }
+    .basic-btn:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    .basic-btn:after {
+      content: "→";
+      position: relative;
+      opacity: 0;
+      top: 3px;
+      right: 20%;
+      transition: 0.3s;
+    }
+    .basic-btn:hover {
+      padding-right: 20px;
+      padding-left: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      outline: none;
+    }
+    .basic-btn:hover::after {
+      opacity: 1;
+      top: 3px;
+      right: -8px;
+    }
+  }
+}
+.container {
+  max-width: 1300px;
+  padding: 0 18px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 6px;
+  padding: 10px 0;
+}
+.header .logo-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo-btns .logo {
+  width: calc(100% - 1px);
+  display: flex;
+  justify-content: center;
+}
+.header .logo-btns .btns {
+  width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.header .logo-btns .btns > * {
+  margin-right: 15px;
+}
+.header .logo-btns .btns > *:last-child {
+  margin-right: 0;
+}
+
+.subcribe-btn, .account-btn {
+  height: 36px;
+  padding: 0 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: normal;
+  font-weight: normal;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+
+.subcribe-btn {
+  background: #B00020;
+  color: #ffffff;
+  border: 1px solid #B00020;
+}
+.subcribe-btn:hover {
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #000000;
+  background: #000000;
+}
+
+.account-btn {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.account-btn::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+  display: block;
+  background: url(../images/account-btn-icon-black.svg) no-repeat center;
+  background-size: auto;
+}
+.account-btn:hover {
+  text-decoration: none;
+  color: #B00020;
+  border: 1px solid #B00020;
+}
+.account-btn:hover::after {
+  background: url(../images/account-btn-icon-red.svg) no-repeat center;
+  background-size: auto;
+}
+
+.nav-tabs-section {
+  display: block;
+  margin: 0 0;
+  background: #e1e1e1;
+}
+.nav-tabs-section .nav-tabs {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0 0;
+}
+.nav-tabs-section .nav-tabs .nav-btn {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  min-height: 100%;
+  width: 130px;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  background: none;
+  box-shadow: none;
+}
+.nav-tabs-section .nav-tabs .nav-btn.active {
+  background: #ffffff;
+}
+.nav-tabs-section .nav-tabs .nav-btn img {
+  width: 90px;
+  height: 90px;
+}
+.nav-tabs-section .nav-tabs .nav-btn span {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.nav-tabs-section .nav-tabs .nav-btn:hover {
+  text-decoration: none;
+}
+
+.nav-content {
+  margin: 50px auto;
+}
+.nav-content .content {
+  display: none;
+  opacity: 0;
+  animation: fadeOut 0.3s ease-in-out;
+}
+.nav-content .content.active {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.7s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.content h2 {
+  font-family: "Merriweather", serif;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0 0 10px;
+}
+.content h2 + p {
+  font-size: 18px;
+  margin: 0 0 0;
+}
+.content p {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  line-height: normal;
+}
+.content p b, .content p strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+.content p span {
+  font-family: inherit;
+  font-size: inherit;
+}
+.content p a {
+  font-family: inherit;
+  font-size: inherit;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: all 0.3s;
+}
+.content p a:hover {
+  text-decoration: none;
+}
+.content p.note {
+  text-align: center;
+}
+.content .basic-btn {
+  margin: 20px auto;
+}
+
+.manage-items {
+  display: block;
+  margin: 20px 0;
+}
+.manage-items .item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.manage-items .item.select-all-option {
+  justify-content: right;
+  align-items: center;
+  padding: 10px 0 25px;
+}
+.manage-items .item.select-all-option label {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: normal;
+  margin-right: 10px;
+}
+.manage-items .item .text {
+  width: calc(100% - 50px);
+}
+.manage-items .item .text .title {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+.manage-items .item .text p {
+  margin: 10px 0 0;
+}
+
+.checkbox-control {
+  display: block;
+  position: relative;
+  padding: 13px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  margin: 0 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.checkbox-control input:checked ~ .checkmark {
+  background-color: #000000;
+}
+.checkbox-control input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkbox-control:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkbox-control:hover input:checked ~ .checkmark {
+  background-color: #000;
+}
+.checkbox-control .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #eee;
+  z-index: 0;
+  transition: all 0.3s;
+}
+.checkbox-control .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox-control .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 570px) {
+  .container {
+    max-width: 100%;
+    padding: 0 18px;
+  }
+
+  .header .logo-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .logo-btns .logo {
+    width: auto;
+    display: flex;
+    justify-content: left;
+  }
+  .header .logo-btns .logo img {
+    width: 80px;
+    height: auto;
+  }
+  .header .logo-btns .btns {
+    width: auto;
+  }
+  .header .logo-btns .btns > * {
+    margin-right: 10px;
+  }
+  .header .logo-btns .btns > *:last-child {
+    margin-right: 0;
+  }
+
+  .subcribe-btn, .account-btn {
+    height: 24px;
+    padding: 0 15px;
+    font-size: 11px;
+  }
+
+  .account-btn::after {
+    width: 10px;
+    height: 10px;
+    margin-left: 3px;
+    background-size: 100% auto;
+  }
+
+  .nav-tabs-section {
+    display: block;
+    margin: 0 0;
+    background: #e1e1e1;
+  }
+  .nav-tabs-section .nav-tabs {
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding-top: 15px;
+  }
+  .nav-tabs-section .nav-tabs .nav-btn {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 5px 8px;
+  }
+  .nav-tabs-section .nav-tabs .nav-btn img {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .nav-tabs-section .nav-tabs .nav-btn span {
+    font-size: 10px;
+    margin: 0 0 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    width: max-content;
+    max-width: 56px;
+    white-space: normal;
+    text-decoration: none;
+  }
+
+  .nav-content {
+    margin: 20px auto;
+  }
+
+  .content h2 {
+    font-size: 28px;
+    margin: 0 0 5px;
+  }
+  .content h2 + p {
+    font-size: 14px;
+  }
+  .content p {
+    font-size: 14px;
+  }
+  .content .basic-btn {
+    margin: 15px auto;
+  }
+
+  .manage-items {
+    display: block;
+    margin: 20px 0;
+  }
+  .manage-items .item {
+    padding: 10px 0;
+  }
+  .manage-items .item.select-all-option {
+    padding: 0px 0 15px;
+  }
+  .manage-items .item.select-all-option label {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  .manage-items .item .text {
+    width: calc(100% - 30px);
+  }
+  .manage-items .item .text .title {
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 5px;
+  }
+  .manage-items .item .text p {
+    margin: 5px 0 0;
+  }
+
+  .checkbox-control {
+    padding: 10px;
+  }
+  .checkbox-control input {
+    margin: 0 0;
+  }
+  .checkbox-control .checkmark {
+    border-radius: 3px;
+  }
+  .checkbox-control .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 4px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 571px) {
+  .header .logo-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .logo-btns .logo {
+    width: auto;
+    display: flex;
+    justify-content: left;
+  }
+  .header .logo-btns .logo img {
+    width: 120px;
+    height: auto;
+  }
+  .header .logo-btns .btns {
+    width: auto;
+  }
+  .header .logo-btns .btns > * {
+    margin-right: 15px;
+  }
+  .header .logo-btns .btns > *:last-child {
+    margin-right: 0;
+  }
+
+  .nav-tabs-section {
+    display: block;
+    margin: 0 0;
+    background: #e1e1e1;
+  }
+  .nav-tabs-section .nav-tabs {
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding-top: 25px;
+  }
+  .nav-tabs-section .nav-tabs .nav-btn {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 10px 15px;
+  }
+  .nav-tabs-section .nav-tabs .nav-btn img {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-tabs-section .nav-tabs .nav-btn span {
+    font-size: 14px;
+    margin: 0 0 0 10px;
+    text-align: left;
+    width: max-content;
+    max-width: 100px;
+    white-space: normal;
+    text-decoration: none;
+  }
+}
+
+/*# sourceMappingURL=manage-mails.css.map */
